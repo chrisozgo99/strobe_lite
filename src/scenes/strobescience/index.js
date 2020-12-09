@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, SafeAreaView, Text, Image} from 'react-native';
+import {View, SafeAreaView, Text, Image, Dimensions} from 'react-native';
 import {TouchableOpacitySVG} from '_atoms';
 import {StrobeScienceMessage} from '_molecules';
 
@@ -24,7 +24,11 @@ function StrobeScienceScreen({navigation}) {
                 <View style={{marginBottom: '3%', marginTop: '2%'}}>
                     <Text
                         style={{
-                            fontSize: 42,
+                            fontSize:
+                                Dimensions.get('window').height === 667 ||
+                                Dimensions.get('window').height === 736
+                                    ? 38
+                                    : 42,
                             textAlign: 'center',
                             fontFamily: 'Rubik',
                         }}>

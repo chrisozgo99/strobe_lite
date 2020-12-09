@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, View, ScrollView} from 'react-native';
+import {Text, View, ScrollView, Dimensions} from 'react-native';
 
 function StrobeScienceMessage(props) {
     return (
@@ -10,7 +10,11 @@ function StrobeScienceMessage(props) {
                 borderRadius: 30,
                 marginHorizontal: '3%',
                 marginTop: '3%',
-                height: '74%',
+                height:
+                    Dimensions.get('window').height === 667 ||
+                    Dimensions.get('window').height === 736
+                        ? '70%'
+                        : '74%',
             }}>
             <View style={{marginVertical: '2.6%'}}>
                 <Text

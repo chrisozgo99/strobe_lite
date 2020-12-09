@@ -1,25 +1,16 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {
-    View,
-    Text,
-    TouchableHighlight,
-    TextInput,
-    ImageBackground,
-    KeyboardAvoidingView,
-    Alert,
-} from 'react-native';
+import {View, Alert, Dimensions} from 'react-native';
 
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
-import {Header, RangeSlider} from '_atoms';
+import {Header} from '_atoms';
 import {SliderAndAssets, TextInputAndAssets, NavBar} from '_molecules';
 import BG from '_assets/images/SportsBG.svg';
 
 function TimeConstraintsScreen({navigation}) {
     const colorArray = navigation.state.params.colorArray;
     // console.log(colorArray);
-
     const [lengthVal, setLengthVal] = useState(1.0);
     const [delayVal, setDelayVal] = useState(0.0);
     const [timeVal, setTimeVal] = useState(0);
@@ -31,7 +22,12 @@ function TimeConstraintsScreen({navigation}) {
             </View>
             <Header
                 title={'COLOR\nTIME CONSTRAINTS'}
-                marginTop="22%"
+                marginTop={
+                    Dimensions.get('window').height === 667 ||
+                    Dimensions.get('window').height === 736
+                        ? '13%'
+                        : '22%'
+                }
                 fontSize={27}
             />
             <KeyboardAwareScrollView>

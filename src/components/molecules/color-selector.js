@@ -41,7 +41,7 @@ function ColorSelector(props) {
                 flexDirection: 'row',
                 flexWrap: 'wrap',
                 marginTop: '7%',
-                marginBottom: '8%',
+                paddingBottom: '18%',
                 height: '50%',
             }}>
             {colorSelector}

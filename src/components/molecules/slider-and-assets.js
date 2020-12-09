@@ -1,13 +1,21 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {View, Text, TextInput} from 'react-native';
+import {View, Text, TextInput, Dimensions} from 'react-native';
 import {RangeSlider} from '_atoms';
 
 function SliderAndAssets(props) {
     const [val, setVal] = useState(props.defaultVal);
 
     return (
-        <View style={{width: '100%', marginTop: '20%'}}>
+        <View
+            style={{
+                width: '100%',
+                marginTop:
+                    Dimensions.get('window').height === 667 ||
+                    Dimensions.get('window').height === 736
+                        ? '12%'
+                        : '20%',
+            }}>
             <View
                 style={{
                     alignItems: 'center',

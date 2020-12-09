@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, TouchableHighlight, View} from 'react-native';
+import {Text, TouchableHighlight, View, Dimensions} from 'react-native';
 
 function LandingButtons(props) {
     const buttons = [
@@ -45,7 +45,18 @@ function LandingButtons(props) {
         );
     });
 
-    return <View style={{marginTop: '20%'}}>{landingButtons}</View>;
+    return (
+        <View
+            style={{
+                marginTop:
+                    Dimensions.get('window').height === 667 ||
+                    Dimensions.get('window').height === 736
+                        ? '7%'
+                        : '20%',
+            }}>
+            {landingButtons}
+        </View>
+    );
 }
 
 export default LandingButtons;

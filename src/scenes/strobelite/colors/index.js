@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {Alert, View, Image} from 'react-native';
+import {Alert, View, Dimensions} from 'react-native';
 import {Header} from '_atoms';
 import {ColorSelector, NavBar} from '_molecules';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -155,7 +155,12 @@ function ColorsScreen({navigation}) {
             </View>
             <Header
                 title={'SELECT\nYOUR COLORS'}
-                marginTop="22%"
+                marginTop={
+                    Dimensions.get('window').height === 667 ||
+                    Dimensions.get('window').height === 736
+                        ? '13%'
+                        : '22%'
+                }
                 fontSize={27}
             />
             <KeyboardAwareScrollView>

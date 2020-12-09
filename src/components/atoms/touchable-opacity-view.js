@@ -23,7 +23,7 @@ function TouchableOpacityView(props) {
             <TouchableOpacity
                 style={{
                     paddingVertical: '3%',
-                    paddingHorizontal: '20%',
+                    paddingHorizontal: '15%',
                     borderRadius: 25,
                 }}
                 onPress={props.onPress}>
