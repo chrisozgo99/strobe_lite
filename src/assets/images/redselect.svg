@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="60.0425998" cy="59.6445556" rx="59.5041322" ry="59.6445556"></ellipse>
+        <filter x="-5.9%" y="-4.2%" width="111.8%" height="111.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.500084918 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="iPhone-XS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-2-Colors-Selected" transform="translate(-34.000000, -344.000000)">
+            <g id="Quizes" transform="translate(38.000000, 195.000000)">
+                <g id="Icons">
+                    <g id="Drama" transform="translate(0.000000, 151.000000)">
+                        <g id="Group">
+                            <g id="Group-6">
+                                <g id="Oval-4-Copy-2">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                    <ellipse stroke="#9C4242" stroke-width="7" stroke-linejoin="square" fill="#E75656" fill-rule="evenodd" cx="60.0425998" cy="59.6445556" rx="56.0041322" ry="56.1445556"></ellipse>
+                                </g>
+                                <polyline id="Line-2" stroke="#9C4242" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" points="45.6198347 57.5135816 55.8062991 70.5957251 76.7329817 49.6446281"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

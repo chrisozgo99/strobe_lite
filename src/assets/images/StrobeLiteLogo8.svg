@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="330px" height="54px" viewBox="0 0 330 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="Kanit" font-size="67.0333333" font-style="italic" font-weight="700">
+            <tspan x="4.12963333" y="74">Strobe</tspan>
+        </text>
+        <filter x="-1.7%" y="-3.5%" width="105.7%" height="112.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="3" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.921568627   0 0 0 0 0.811764706  0 0 0 0.503962862 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-2.000000, -28.000000)">
+            <g id="Strobe">
+                <use stroke="#3A3A3A" fill="#9E8AF8" fill-opacity="1" stroke-width="1" stroke-opacity="1" filter="url(#filter-2)" xlink:href="#text-1"></use>
+                <use fill="#9E8AF8" fill-rule="evenodd" xlink:href="#text-1"></use>
+                <use stroke="#3A3A3A" stroke-width="1" xlink:href="#text-1"></use>
+            </g>
+            <text id="Lite" font-family="Kanit" font-size="67.03125" font-style="italic" font-weight="700" fill="#000000">
+                <tspan x="212" y="75">Lite</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

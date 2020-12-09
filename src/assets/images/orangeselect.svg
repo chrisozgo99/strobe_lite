@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-15.7%" y="-14.0%" width="131.4%" height="131.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.496886322 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <ellipse id="path-2" cx="60.5497232" cy="60.523123" rx="60" ry="60.0715101"></ellipse>
+        <filter x="-9.6%" y="-7.9%" width="119.2%" height="119.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.107252038 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="iPhone-XS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-2-Colors-Selected" transform="translate(-210.000000, -501.000000)">
+            <g id="Quizes" transform="translate(38.000000, 204.000000)">
+                <g id="Icons">
+                    <g id="Group-3" transform="translate(0.000000, 302.000000)">
+                        <g id="Group-9" filter="url(#filter-1)" transform="translate(179.000000, 0.000000)">
+                            <g id="Blue">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                <ellipse stroke-opacity="0.51024683" stroke="#3C392E" stroke-width="7" stroke-linejoin="square" fill="#F39C12" fill-rule="evenodd" cx="60.5497232" cy="60.523123" rx="56.5" ry="56.5715101"></ellipse>
+                            </g>
+                            <polyline id="Line-2" stroke-opacity="0.510190217" stroke="#3C352E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" points="46 56.9252819 56.2713516 70.1010716 77.3724232 49"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
