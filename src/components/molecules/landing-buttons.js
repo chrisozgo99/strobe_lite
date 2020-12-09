@@ -1,6 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, TouchableHighlight, View, Dimensions} from 'react-native';
+import {
+    Text,
+    TouchableHighlight,
+    View,
+    Dimensions,
+    Platform,
+} from 'react-native';
 
 function LandingButtons(props) {
     const buttons = [
@@ -31,7 +37,10 @@ function LandingButtons(props) {
                 }}
                 key={button.name}>
                 <TouchableHighlight
-                    style={{paddingVertical: '10%', paddingHorizontal: '30%'}}
+                    style={{
+                        paddingVertical: Platform.isPad ? '5%' : '10%',
+                        paddingHorizontal: '30%',
+                    }}
                     activeOpacity={0.6}
                     underlayColor="#9E8AF8"
                     onPress={() => {

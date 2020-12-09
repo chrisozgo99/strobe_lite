@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {View, Alert, Dimensions} from 'react-native';
+import {View, Alert, Dimensions, Platform} from 'react-native';
 
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
@@ -24,7 +24,8 @@ function TimeConstraintsScreen({navigation}) {
                 title={'COLOR\nTIME CONSTRAINTS'}
                 marginTop={
                     Dimensions.get('window').height === 667 ||
-                    Dimensions.get('window').height === 736
+                    Dimensions.get('window').height === 736 ||
+                    Platform.isPad
                         ? '13%'
                         : '22%'
                 }

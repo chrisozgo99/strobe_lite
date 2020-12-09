@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {View, Text, TextInput, Dimensions} from 'react-native';
+import {View, Text, TextInput, Dimensions, Platform} from 'react-native';
 import {RangeSlider} from '_atoms';
 
 function SliderAndAssets(props) {
@@ -12,7 +12,8 @@ function SliderAndAssets(props) {
                 width: '100%',
                 marginTop:
                     Dimensions.get('window').height === 667 ||
-                    Dimensions.get('window').height === 736
+                    Dimensions.get('window').height === 736 ||
+                    Platform.isPad
                         ? '12%'
                         : '20%',
             }}>

@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {Alert, View, Dimensions} from 'react-native';
+import {Alert, View, Dimensions, Platform} from 'react-native';
 import {Header} from '_atoms';
 import {ColorSelector, NavBar} from '_molecules';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -157,7 +157,8 @@ function ColorsScreen({navigation}) {
                 title={'SELECT\nYOUR COLORS'}
                 marginTop={
                     Dimensions.get('window').height === 667 ||
-                    Dimensions.get('window').height === 736
+                    Dimensions.get('window').height === 736 ||
+                    Platform.isPad
                         ? '13%'
                         : '22%'
                 }

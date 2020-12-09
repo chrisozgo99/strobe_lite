@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Platform} from 'react-native';
 
 import {TouchableOpacityPNG} from '_atoms';
 
@@ -24,7 +24,7 @@ function SportIcon(props) {
                 style={{
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginTop: '-15%',
+                    marginTop: Platform.isPad ? '-6%' : '-15%',
                 }}>
                 <Text
                     style={{

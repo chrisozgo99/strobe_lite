@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Platform} from 'react-native';
 import {TouchableOpacitySVG} from '_atoms';
 
 import Back from '_assets/images/SmallBackButton.svg';
@@ -26,7 +26,11 @@ function HeaderWithBackButton(props) {
                     justifyContent: 'space-between',
                     marginTop: '20%',
                 }}>
-                <View style={{marginLeft: '3%', marginTop: '2.9%'}}>
+                <View
+                    style={{
+                        marginLeft: '3%',
+                        marginTop: Platform.isPad ? '0%' : '2.9%',
+                    }}>
                     <TouchableOpacitySVG
                         svg={<Back />}
                         onPress={() => {
@@ -37,7 +41,7 @@ function HeaderWithBackButton(props) {
                 <View>
                     <Text
                         style={{
-                            marginTop: '5%',
+                            marginTop: Platform.isPad ? '0%' : '5%',
                             textAlign: 'center',
                             justifyContent: 'center',
                             fontSize: 34,

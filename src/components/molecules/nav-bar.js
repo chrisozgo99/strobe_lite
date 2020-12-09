@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, TouchableHighlight} from 'react-native';
+import {Text, TouchableHighlight, Platform} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 function NavBar(props) {
@@ -13,7 +13,6 @@ function NavBar(props) {
                 width: '100%',
                 position: 'absolute',
                 bottom: 0,
-                // bottom: '-19.%',
                 height: '10%',
                 flexDirection: 'row',
                 alignItems: 'center',
@@ -36,7 +35,7 @@ function NavBar(props) {
                         fontSize: 62,
                         fontWeight: '200',
                         color: 'white',
-                        paddingBottom: '23%',
+                        paddingBottom: Platform.isPad ? '2%' : '23%',
                     }}>
                     |
                 </Text>

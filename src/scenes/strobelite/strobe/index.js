@@ -165,6 +165,7 @@ function StrobeScreen({navigation}) {
                         <TouchableOpacitySVG
                             svg={<Back />}
                             onPress={() => {
+                                ScreenBrightness.setBrightness(0.5);
                                 IdleTimerManager.setIdleTimerDisabled(false);
                                 navigation.navigate('TimeConstraints');
                             }}

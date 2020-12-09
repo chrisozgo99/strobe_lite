@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View} from 'react-native';
+import {View, Platform} from 'react-native';
 
 import {Header, Subheader, CommunityMessage} from '_atoms';
 import {BasketballVideos} from '_molecules';
@@ -12,7 +12,11 @@ function VideosScreen({navigation}) {
     var sport = navigation.state.params.sport;
     return (
         <View style={{height: '100%', width: '100%'}}>
-            <Header title="COMMUNITY" marginTop="23%" fontSize={32} />
+            <Header
+                title="COMMUNITY"
+                marginTop={Platform.isPad ? '12%' : '23%'}
+                fontSize={32}
+            />
             <Subheader title={sport} navigation={navigation} nav="Sports" />
             {sport === 'Basketball' ? (
                 <BasketballVideos />

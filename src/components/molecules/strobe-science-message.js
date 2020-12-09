@@ -90,7 +90,8 @@ function StrobeScienceMessage(props) {
                     splitsecond decisions that simulate real games. Its users
                     are training their brains to instinctively react to any
                     situation thrown at them.
-                    {'\n'}{'\n'}
+                    {'\n'}
+                    {'\n'}
                     {'\t'}The athlete, trainer, or coach customizes the workout
                     by selecting a certain amount of colors they want to use in
                     their drill. Each color represents an action that they would
@@ -99,7 +100,8 @@ function StrobeScienceMessage(props) {
                     the total time they want to be running the drill. Of the
                     colors selected, StrobeLite will output a random color,
                     forcing the athlete to react, rather than anticipate their
-                    decision. Just like the game!{'\n'}{'\n'}
+                    decision. Just like the game!{'\n'}
+                    {'\n'}
                     {'\t'}StrobeLite is revolutionizing the modern day approach
                     to sports training. While we cannot guarantee that it will
                     make you an overnight success, we can guarantee that
