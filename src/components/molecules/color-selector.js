@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View} from 'react-native';
+import {View, Platform} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
 import {TouchableOpacitySVG} from '_atoms';
 
@@ -14,7 +14,7 @@ function ColorSelector(props) {
                     width: '50%',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginVertical: '4%',
+                    marginVertical: Platform.OS === 'android' ? '0%' : '4%',
                     shadowColor: '#000',
                     shadowOffset: {width: 5, height: 5},
                     shadowOpacity: 0.7,
@@ -23,7 +23,10 @@ function ColorSelector(props) {
                 }}>
                 <TouchableOpacitySVG svg={color.svg} onPress={color.onPress} />
                 <View
-                    style={{marginTop: '2%', opacity: color.selected ? 1 : 0}}>
+                    style={{
+                        marginTop: Platform.OS === 'android' ? '-6%' : '2%',
+                        opacity: color.selected ? 1 : 0,
+                    }}>
                     <TextInput
                         maxLength={50}
                         editable={color.selected}

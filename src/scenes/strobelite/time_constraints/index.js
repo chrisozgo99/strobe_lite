@@ -25,7 +25,8 @@ function TimeConstraintsScreen({navigation}) {
                 marginTop={
                     Dimensions.get('window').height === 667 ||
                     Dimensions.get('window').height === 736 ||
-                    Platform.isPad
+                    Platform.isPad ||
+                    Platform.OS === 'android'
                         ? '13%'
                         : '22%'
                 }

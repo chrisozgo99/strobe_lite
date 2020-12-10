@@ -13,7 +13,8 @@ function SliderAndAssets(props) {
                 marginTop:
                     Dimensions.get('window').height === 667 ||
                     Dimensions.get('window').height === 736 ||
-                    Platform.isPad
+                    Platform.isPad ||
+                    Platform.OS === 'android'
                         ? '12%'
                         : '20%',
             }}>
@@ -21,7 +22,7 @@ function SliderAndAssets(props) {
                 style={{
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginBottom: '3%',
+                    marginBottom: Platform.OS === 'android' ? '8%' : '3%',
                 }}>
                 <Text style={{fontSize: 22, fontFamily: 'Rubik'}}>
                     {props.title}
@@ -38,11 +39,16 @@ function SliderAndAssets(props) {
                 </View>
                 <View
                     style={{
-                        marginTop: '1.6%',
+                        marginTop: Platform.OS === 'android' ? '0%' : '1.6%',
+                        marginBottom: Platform.OS === 'android' ? '-5%' : '0%',
                         flexDirection: 'row',
                         marginLeft: '-5%',
                     }}>
-                    <View>
+                    <View
+                        style={{
+                            marginTop:
+                                Platform.OS === 'android' ? '-20%' : '0%',
+                        }}>
                         <TextInput
                             style={{fontSize: 22, fontFamily: 'Rubik'}}
                             keyboardType="decimal-pad"

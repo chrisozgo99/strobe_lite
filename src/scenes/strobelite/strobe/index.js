@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState, useEffect, useRef, useCallback} from 'react';
-import {SafeAreaView, View, Text} from 'react-native';
+import {SafeAreaView, View, Text, Platform} from 'react-native';
 import {StartStop, TouchableOpacitySVG} from '_atoms';
 import {getColorsAndWords, getRandomColor} from '_utils';
 import IdleTimerManager from 'react-native-idle-timer';
@@ -22,7 +22,9 @@ function StrobeScreen({navigation}) {
     var initialTime = useRef();
 
     useEffect(() => {
-        ScreenBrightness.setBrightness(1);
+        if (Platform.OS !== 'android') {
+            ScreenBrightness.setBrightness(1);
+        }
         IdleTimerManager.setIdleTimerDisabled(true);
     });
 
@@ -165,7 +167,9 @@ function StrobeScreen({navigation}) {
                         <TouchableOpacitySVG
                             svg={<Back />}
                             onPress={() => {
-                                ScreenBrightness.setBrightness(0.5);
+                                if (Platform.OS !== 'android') {
+                                    ScreenBrightness.setBrightness(1);
+                                }
                                 IdleTimerManager.setIdleTimerDisabled(false);
                                 navigation.navigate('TimeConstraints');
                             }}

@@ -1,6 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, SafeAreaView, Text, Image, Dimensions} from 'react-native';
+import {
+    View,
+    SafeAreaView,
+    Text,
+    Image,
+    Dimensions,
+    Platform,
+} from 'react-native';
 import {TouchableOpacitySVG} from '_atoms';
 import {StrobeScienceMessage} from '_molecules';
 
@@ -12,6 +19,20 @@ import LinearGradient from 'react-native-linear-gradient';
 function StrobeScienceScreen({navigation}) {
     return (
         <View style={{height: '100%'}}>
+            {Platform.OS !== 'android' ? null : (
+                <LinearGradient
+                    colors={['rgba(35,217,255,0.60)', 'rgba(158,138,248,0.60)']}
+                    style={{
+                        width: '100%',
+                        position: 'absolute',
+                        height: '100%',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: -1,
+                    }}
+                />
+            )}
             <SafeAreaView>
                 <View>
                     <TouchableOpacitySVG
@@ -26,7 +47,8 @@ function StrobeScienceScreen({navigation}) {
                         style={{
                             fontSize:
                                 Dimensions.get('window').height === 667 ||
-                                Dimensions.get('window').height === 736
+                                Dimensions.get('window').height === 736 ||
+                                Platform.OS === 'android'
                                     ? 38
                                     : 42,
                             textAlign: 'center',
@@ -56,19 +78,20 @@ function StrobeScienceScreen({navigation}) {
                     <StrobeScienceMessage />
                 </View>
             </SafeAreaView>
-
-            <LinearGradient
-                colors={['rgba(35,217,255,0.60)', 'rgba(158,138,248,0.60)']}
-                style={{
-                    width: '100%',
-                    position: 'absolute',
-                    height: '100%',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    zIndex: -1,
-                }}
-            />
+            {Platform.OS === 'android' ? null : (
+                <LinearGradient
+                    colors={['rgba(35,217,255,0.60)', 'rgba(158,138,248,0.60)']}
+                    style={{
+                        width: '100%',
+                        position: 'absolute',
+                        height: '100%',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: -1,
+                    }}
+                />
+            )}
         </View>
     );
 }

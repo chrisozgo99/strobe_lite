@@ -38,7 +38,10 @@ function LandingButtons(props) {
                 key={button.name}>
                 <TouchableHighlight
                     style={{
-                        paddingVertical: Platform.isPad ? '5%' : '10%',
+                        paddingVertical:
+                            Platform.isPad || Platform.OS === 'android'
+                                ? '5%'
+                                : '10%',
                         paddingHorizontal: '30%',
                     }}
                     activeOpacity={0.6}

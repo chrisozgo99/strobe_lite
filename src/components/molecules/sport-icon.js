@@ -24,7 +24,11 @@ function SportIcon(props) {
                 style={{
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginTop: Platform.isPad ? '-6%' : '-15%',
+                    marginTop: Platform.isPad
+                        ? '-6%'
+                        : Platform.OS === 'android'
+                        ? '-12%'
+                        : '-15%',
                 }}>
                 <Text
                     style={{

@@ -35,7 +35,10 @@ function NavBar(props) {
                         fontSize: 62,
                         fontWeight: '200',
                         color: 'white',
-                        paddingBottom: Platform.isPad ? '2%' : '23%',
+                        paddingBottom:
+                            Platform.isPad || Platform.OS === 'android'
+                                ? '2%'
+                                : '23%',
                     }}>
                     |
                 </Text>

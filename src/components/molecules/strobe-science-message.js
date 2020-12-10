@@ -1,12 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, View, ScrollView, Dimensions} from 'react-native';
+import {Text, View, ScrollView, Dimensions, Platform} from 'react-native';
 
 function StrobeScienceMessage(props) {
     return (
         <ScrollView
             style={{
                 backgroundColor: 'white',
+                // opacity: 0,
                 borderRadius: 30,
                 marginHorizontal: '3%',
                 marginTop: '3%',
@@ -15,6 +16,7 @@ function StrobeScienceMessage(props) {
                     Dimensions.get('window').height === 736
                         ? '70%'
                         : '74%',
+                zIndex: 0,
             }}>
             <View style={{marginVertical: '2.6%'}}>
                 <Text
@@ -28,7 +30,7 @@ function StrobeScienceMessage(props) {
                     Training your brain
                 </Text>
             </View>
-            <View style={{marginHorizontal: '4%'}}>
+            <View style={{marginHorizontal: '4%', zIndex: 1}}>
                 <Text style={{fontSize: 15, fontFamily: 'Rubik'}}>
                     {'\t'}
                     It may seem quite obvious to say that your brain matters in
